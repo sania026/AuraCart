@@ -109,6 +109,6 @@ CLOUDINARY_API_SECRET=your_api_secret
 
 ## Author
 
-**Sania Thakur**
+**Sania Kumari**
 
 B.Tech (Computer Science)
