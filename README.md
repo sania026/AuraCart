@@ -1,91 +1,114 @@
-# AuraCart - Premium MERN E-Commerce Platform
+# AuraCart
 
-AuraCart is a modern, responsive, premium MERN (MongoDB, Express, React, Node.js) E-commerce application featuring native SVG analytics charts, AI-powered smart search suggestion routes, in-app notifications/email transactional alerts, coupons checkout verification, and interactive user profile modules.
+AuraCart is a full-stack E-Commerce web application developed using the MERN Stack (MongoDB, Express.js, React.js and Node.js). The application allows users to browse products, manage their cart and wishlist, place orders, and provides an admin dashboard to manage the store.
 
----
+## Features
 
-## 🚀 Key Features
+### User Features
+- User Registration and Login
+- Email OTP Verification
+- Forgot Password using OTP
+- JWT Authentication
+- Product Search
+- Product Categories
+- Product Filters and Sorting
+- Product Details Page
+- Shopping Cart
+- Wishlist
+- Checkout
+- Cash on Delivery (COD)
+- Order History
+- User Profile Management
+- Responsive Design
 
-### 1. Customer Authentication & OTP Center
-* **Email Verification via OTP:** Registering users receive a 6-digit verification code. Accounts remain unverified until OTP check-ins succeed.
-* **OTP Resend Action:** A 60-second cooldown timer prevents abuse of resend triggers.
-* **Eye Toggles on Passwords:** Eye icons to hide/show password entries on Register, Login, Reset, and Profile panels.
-* **Forgot Password flow:** Password resetting uses transaction email OTP security checks.
+### Admin Features
+- Secure Admin Login
+- Admin Dashboard
+- Product Management (Add, Edit, Delete)
+- Category Management
+- Order Management
+- User Management
+- Dashboard Statistics
 
-### 2. AI Search & Recommendation Widgets
-* **Autocomplete Suggestions:** Debounced header input searching categories and product titles as the user types.
-* **Trending Collections:** A tabbed layout showcasing Best Sellers (order quantity aggregates), New Arrivals (latest dates), Top Rated (ratings count), and Featured items.
-* **Recommended for You:** A personalized recommendation slider querying purchases category history.
-* **Frequently Bought Together:** Bundle packages displaying products often ordered with the current item, a total price sum, and a single-click "Add Bundle to Cart" button.
-* **Recently Viewed Shelf:** Persistent tracking of items explored by the user.
+## Tech Stack
 
-### 3. Real-Time In-App & Email Alerts
-* **Transactional Email dispatches:** SMTP notifications generated on signup, verification, password resetting, ordering, shipping, and cancellations.
-* **In-App Notification Center:** A Navbar Bell dropdown listing paginated user alerts with read toggles.
-* **Admin Warning triggers:** Low inventory alerts (< 5 units) and order inflow notifications.
+### Frontend
+- React.js
+- Vite
+- React Router
+- Axios
+- CSS
 
-### 4. Admin Management Center
-* **Interactive SVG Charts:** Sales Trend line-charts and Order Volume bar-charts displaying statistics for the last 7 days.
-* **Inventory Control indicators:** Out-of-Stock and Low-Stock warning badges.
-* **Cloudinary Multi-file uploads:** Image preview thumbnails with individual deletion buttons in forms.
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT Authentication
+- Nodemailer
+- Cloudinary
 
-### 5. Checkout & Invoice Tools
-* **Coupon verification:** Validate promo coupons against minimum purchase and expiry criteria.
-* **PDF Invoice download:** Print layout styles mapping clean invoices.
-* **Cart Reordering:** Quickly add items from previous orders back to the cart.
+## Project Structure
 
----
-
-## 🛠️ Tech Stack
-
-* **Frontend:** React, Vite, React Router DOM, Axios, Lucide Icons, Vanilla CSS
-* **Backend:** Node.js, Express.js, MongoDB + Mongoose, JWT, Nodemailer, Cloudinary, Razorpay SDK
-
----
-
-## ⚙️ Environment Variables Setup
-
-Create a `.env` file inside the `backend` folder:
-```env
-PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/ecommerce
-JWT_SECRET=your_jwt_secret_key
-RAZORPAY_KEY_ID=your_razorpay_key_id
-RAZORPAY_KEY_SECRET=your_razorpay_key_secret
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-EMAIL_USER=your_gmail_address@gmail.com
-EMAIL_PASS=your_gmail_app_password
-NODE_ENV=development
+```
+AuraCart/
+│
+├── backend/
+├── frontend/
+└── README.md
 ```
 
----
+## Installation
 
-## 💻 Running Locally
+### Clone Repository
 
-### 1. Database Seeding
-Insert 20 realistic electronic test products:
 ```bash
-cd backend
-npm run seed
+git clone https://github.com/sania026/AuraCart.git
 ```
 
-### 2. Start Backend Server
+### Backend
+
 ```bash
 cd backend
+npm install
 npm run dev
 ```
 
-### 3. Start Frontend Client
+### Frontend
+
 ```bash
 cd frontend
+npm install
 npm run dev
 ```
-Open `http://localhost:5173` to explore.
 
----
+## Environment Variables
 
-## ⚠️ Known Limitations
-1. **Mock Emails Fallback:** If Gmail SMTP variables (`EMAIL_USER`, `EMAIL_PASS`) are missing in the `.env` file, the backend prints OTP verification numbers and email bodies straight to the server console log terminal rather than throwing an exception.
-2. **Local Loopback DNS IP:** The frontend uses loopback IP `127.0.0.1:5000` rather than `localhost:5000` to bypass Windows DNS connection drops.
+Create a `.env` file inside the `backend` folder.
+
+Example:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+EMAIL_USER=your_email
+EMAIL_PASS=your_app_password
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+## Future Enhancements
+
+- Online Payment Integration
+- Product Recommendation System
+- Sales Analytics
+- Multi-Vendor Support
+- Mobile Application
+
+## Author
+
+**Sania Thakur**
+
+B.Tech (Computer Science)
